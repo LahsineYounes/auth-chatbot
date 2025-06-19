@@ -1,0 +1,13 @@
+fastapi 
+uvicorn 
+requests 
+pydantic 
+fastapi-keycloak
+fastapi_keycloak_middleware
+python-jose
+httpx
+python-multipart
+qdrant-client
+sentence-transformers
+python-dotenv
+fastapi[all]

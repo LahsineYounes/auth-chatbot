@@ -1,0 +1,24 @@
+{
+    "questions": [
+        {
+            "pattern": "Qu'est-ce que l'EST Salé ?",
+            "answer": "L'École Supérieure de Technologie de Salé (EST-Salé) est un établissement public d'enseignement supérieur professionnel rattaché à l'Université Mohammed V de Rabat, inauguré en 1993-1994. Elle forme en deux ans des techniciens supérieurs via le DUT, avec une offre de Licence professionnelle depuis 2014–2015."
+        },
+        {
+            "pattern": "Quelles sont les filières disponibles ?",
+            "answer": "Filières DUT (Bac+2) : Techniques de Management, Marketing & Techniques de Commercialisation, Environnement et Techniques de l'Eau, Génie Civil, Construction & Énergétique du Bâtiment, Génie Bio‑Industriel, Administration Réseau Informatiques, Génie Logiciel, Génie Électrique & Informatique Industrielle, Génie Industriel & Maintenance. Licences Professionnelles : Efficience Énergétique & Acoustique du Bâtiment, Génie Civil, Logistique de Distribution, Ingénierie des Applications Mobiles, Instrumentation & Maintenance Biomédicale, Maintenance des Équipements Scientifiques, Diagnostic & Maintenance des Systèmes Électroniques Embarqués (automobile)."
+        },
+        {
+            "pattern": "Quels sont les chiffres clés ?",
+            "answer": "L'EST Salé compte environ 84 enseignants permanents et 96 personnels administratifs, 1300 étudiants en DUT et 120 en Licence pro, 10 filières DUT et 6 filières LP en initial, avec un taux de diplômation proche de 100%. L'infrastructure comprend 5 hectares, 2 amphithéâtres (250 places), salles, laboratoires, bibliothèques, 900 postes informatiques et un complexe omnisport."
+        },
+        {
+            "pattern": "Comment s'inscrire ?",
+            "answer": "Pour le DUT : inscription en ligne via le portail préinscription.um5.ac.ma, sur sélection (75% Bac national + 25% Bac régional). Pour la Licence pro : préinscriptions en ligne (dates variables), sélection via dossier et concours écrit/entretien."
+        },
+        {
+            "pattern": "Contact EST Salé",
+            "answer": "Téléphone : 05 37 88 15 61 / 62 / 63, Email : ests@um5.ac.ma, Adresse : Avenue Prince Héritier, B.P. 227, Salé 11000, Maroc, Site officiel : http://est.um5.ac.ma"
+        }
+    ]
+}
