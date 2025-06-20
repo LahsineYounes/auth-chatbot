@@ -1,10 +1,16 @@
 version: '3.8'
-
-networks:
-  dws-network:
-    driver: bridge
-
 services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    depends_on:
+      ollama:
+        condition: service_started
+      auth-service:
+        condition: service_healthy
   chatbot-service:
     build:
       context: ./backend
@@ -27,8 +33,6 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-    networks:
-      - dws-network
 
   auth-service:
     image: quay.io/keycloak/keycloak:latest
@@ -38,16 +42,12 @@ services:
       - KEYCLOAK_ADMIN_PASSWORD=admin
     ports:
       - "8080:8080"
-    volumes:
-      - ./keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json
-    command: ["start-dev", "--import-realm"]
+    command: ["start-dev"]
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/"]
       interval: 15s
       timeout: 10s
       retries: 20
-    networks:
-      - dws-network
 
   qdrant:
     image: qdrant/qdrant:latest
@@ -57,8 +57,8 @@ services:
       - "6334:6334"  # HTTP
     volumes:
       - qdrant_data:/qdrant/storage
-    networks:
-      - dws-network
+    # Not adding a healthcheck for qdrant for now to keep it simple,
+    # as its default / path might not be suitable for a basic curl check.
 
   ollama:
     image: ollama/ollama:latest
@@ -67,8 +67,6 @@ services:
       - "11434:11434"
     volumes:
       - ollama_data:/root/.ollama
-    networks:
-      - dws-network
 
 volumes:
   ollama_data: {}
