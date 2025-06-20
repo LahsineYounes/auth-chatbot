@@ -1,5 +1,5 @@
 # Use the latest Python 3.11.x slim image for security patches
-FROM python:3.11-slim
+FROM python:3.11.9-slim
 
 # Set working directory
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN apt-get update && \
 COPY requirements.txt .
 
 # Install Python dependencies
-RUN pip install --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY . .
